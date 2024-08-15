@@ -27,7 +27,7 @@ body {
 }
 
 .caixa-principal {
-    background-color: var(--branco);
+    background-color: var(--vermelho);
     width: 90%;
     max-width: 600px;
     text-align: center;
