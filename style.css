@@ -33,3 +33,7 @@ body {
     text-align: center;
     padding: 20px;
 }
+button{
+    background-color: var(--branco);
+    color: var(--branco)
+}
