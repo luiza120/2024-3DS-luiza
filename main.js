@@ -80,7 +80,7 @@ function mostraPergunta()
     {
         if (atual >= perguntas.length){
             mostraResultado();
-            return
+            return;
         }
         perguntaAtual = perguntas[atual];
         caixaPerguntas.textContent = perguntaAtual.enunciado;
@@ -98,7 +98,7 @@ function mostraPergunta()
             caixaAlternativas.appendChild(botaoAlternativas);
         }
     }
-    function respostaSelecionada(opcaoselecionada){
+    function respostaSelecionada(opcaoSelecionada){
         const afirmacoes = opcaoSelecionada.afirmacao;
         historiaFinal += afirmacoes + " "
         atual++;
