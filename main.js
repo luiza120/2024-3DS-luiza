@@ -41,8 +41,7 @@ const perguntas = [
             {
                 texto: "Alternativa06",
                 afirmacao: "afirmacao06"
-            },
-            
+            }, 
         ]
     },
     {
@@ -94,7 +93,7 @@ function mostraPergunta()
                 atual++;
                 mostraPergunta();
             })
-            caixaAlternativa.appendChild(botaoAlternativas);
+            caixaAlternativas.appendChild(botaoAlternativas);
         }
     }
 
