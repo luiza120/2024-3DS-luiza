@@ -1,8 +1,8 @@
 const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPerguntas = document.querySelector('.caixa-perguntas');
 const caixaAlternativas = document.querySelector('.caixa-alternativas');
-const caixaResultado = document.querySelector('caixa-resultado');
-const textoResultado =  document.querySelector('texto-resultado');
+const caixaResultado = document.querySelector('.caixa-resultado');
+const textoResultado =  document.querySelector('.texto-resultado');
 
 const perguntas = [
     {
@@ -15,7 +15,7 @@ const perguntas = [
             {
                 texto: "não, gosto de optar por movimentar meu físico",
                 afirmacao: "Bom, se você opta por movimento físico, academia, pilates e até mesmo a corrida podem ser uma ótima opção, além de eles serem saúde, libera vários hormônios e neurotransmissores que causam bem-estar, felicidade e relaxamento."
-            },
+            }
         ]    
     },
     {
@@ -28,7 +28,7 @@ const perguntas = [
             {
                 texto: "particularmente prefiro treinar foco e concentração",
                 afirmacao: "Como disse gosta de trabalhar seu foco e concentração, meditação e yoga são ótimas formas de começar, elas auxiliam na consciência corporal além de reduzir os níveis de estresse."
-            },
+            }
         ]
     },
     {
@@ -41,7 +41,7 @@ const perguntas = [
             {
                 texto: "não sou muito bom com atividades culinárias porém tento",
                 afirmacao: "Você disse que não é muito bom com atividades culinárias e tudo bem, isso não é problema! uma ótima atividade manual, pode ser aprender crochê ou algum instrumento :)"
-            }, 
+            } 
         ]
     },
     {
@@ -54,7 +54,7 @@ const perguntas = [
             {
                 texto: "Sou uma pessoa mais caseira porém gostaria de mudar isso",
                 afirmacao: "Já que você é uma pessoa caseira mas quer mudar isso, uma ótima forma de começar é saindo socializar com seus amigos em lugares que goste além de trabalhar também a comunicação."
-            },
+            }
         ]
     },
     {
@@ -67,10 +67,10 @@ const perguntas = [
             {
                 texto: "Está bem apagada porém quero mudar isso para ter mais leveza em meio ao meu cotidiano.",
                 afirmacao: "Já que disse que sua criatividade está apagada mas pretende mudar isso, pode começar desenhando ou colorindo, ajuda na coordenação motora, nos traz para o momento presente assim trazendo nossa criatividade para combinar cores e linhas de forma fácil!"
-            }, 
+            }
         ]
-    }
-]
+    },
+];
 
 let atual = 0;
 let perguntaAtual;
@@ -78,7 +78,7 @@ let historiaFinal = "";
 
 function mostraPergunta() 
     {
-        if (atual >= perguntas.length){
+        if (atual >= perguntas.length) {
             mostraResultado();
             return;
         }
@@ -90,15 +90,14 @@ function mostraPergunta()
 
     function mostraAlternativas()
     {
-        for (const alternativa of perguntaAtual.alternativas)
-        {
+        for (const alternativa of perguntaAtual.alternativas) {
             const botaoAlternativas = document.createElement("button");
             botaoAlternativas.textContent = alternativa.texto;
             botaoAlternativas.addEventListener("click",() => respostaSelecionada(alternativa))
             caixaAlternativas.appendChild(botaoAlternativas);
         }
     }
-    function respostaSelecionada(opcaoSelecionada){
+    function respostaSelecionada(opcaoSelecionada) {
         const afirmacoes = opcaoSelecionada.afirmacao;
         historiaFinal += afirmacoes + " "
         atual++;
